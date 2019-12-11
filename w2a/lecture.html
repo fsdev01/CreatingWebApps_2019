@@ -9,19 +9,145 @@
 </head>
 
 <body>
-    <h1>Week 2</h1>
-    <figure>
-        <img src="fish.jpg" alt="Food" height="300" width="150"/>
-        <figcaption> Sourced from Unsplash</figcaption>
-    </figure>
-    <p><a href="lecture.html#test">Link Below</a></p>
-    <p>Write to <a href="mailto:test@gmail.com">Contact Us</a> for a consultation appointment</p>
-    <a href="http://www.reddit.com" title="link to reddit"><img src="fish.jpg" alt="text" height="50" width="50"/></a>
     
-    
-    <p id="test">
-        Hello World!
+    <!-- https://mercury.swin.edu.au/it000000/formtest.php -->
+<form id="survey" method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+    <p>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" maxlength="20" size="20" />
     </p>
+    <p>
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" maxlength="2" size="2"/>
+    </p>
+    <p>
+        Things you liked about the seminar
+        <input type="checkbox" name="things[]" id="location" checked="checked" value="location">
+        <label for="location">Location</label>
+        <input type="checkbox" name="things[]" id="food" value="food"/>
+        <label for="food">Food</label>
+        <input type="checkbox" name="things[]" id="speaker" value="speaker"/>
+        <label for="speaker">Speaker</label>
+    </p>
+    
+    <p>Rate your experience <br/>
+        <input type="radio" name="rating" value="excel" id="excellent" checked="checked"/>
+        <label for="excellent">Excellent</label>
+        
+        <input type="radio" name="rating" value="good" id="good"/>
+        <label for="good">Good</label>
+        
+        <input type="radio" name="rating" value="fair" id="fair"/>
+        <label for="fair">Fair</label>
+
+    </p>
+    
+    <label for="ranking">Rank the Seminar</label>
+    <select name="ranking" id="ranking">
+        <option value="5" >5</option>
+        <option value="4">4</option>
+        <option value="3" selected="selected">3</option>
+        <option value="2">2</option>
+        <option value="1">1</option>
+    </select>
+    
+  
+    <p>
+        <label for="comments">Comments</label> <br/>
+        <textarea name="comments" id="comments" cols="20" rows="5">Enter your comments here</textarea>
+    </p>
+    
+    <fieldset id="enrol">
+        <lengend>Personal Details</lengend> <br/>
+        <label for="fname">Name:</label> 
+        <input type="text" name="fname" id="fname"/> <br/>
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email"/> <br/>
+        <label for="dob">Date of birth</label>
+        <input type="text" name="dob" id="dob"/>    
+    </fieldset>
+
+        
+    <p>
+        <label>Colour
+        <input type="color" name="favcolor" autofocus />
+        </label>
+    </p>
+    
+    <p>
+        <label>Date</label>
+        <input type="date" name="bday"/>
+    </p>
+    
+    <p>
+        <label>Time</label>
+        <input type="time" name="starttime"/>
+    </p>
+    
+    
+    <p>
+        <label>Email:
+        <input type="email" name="tempemail" placeholder="name@domain.com"/>
+        </label>
+    </p>
+    
+    
+    <p>
+        <label>Enter number from 0 to 10</label>
+        <input type="number" name="score" min=0 max="10" step="1" value="5" />
+    </p>
+    
+    <p>
+        <label>Enter from 0 to 10</label>
+        <input type="range" name="rating2" min="0" max="10" value="1"/>
+    
+    </p>
+    
+    <p><label>Search</label>
+        <input type="search" name="searchquery" placeholder="search query"/>
+    </p>
+    
+    <p><label>URL
+        <input type="url" name="website" placeholder="http://www.domainname.au"/>
+        </label>
+        
+    </p>
+    
+    <p><label>
+        Phone
+        <input type="tel" name="phone" placeholder="(##) ####-####" pattern="\(\d{2}\) +\d{4}-\d{4}"/>
+        </label>
+    </p>
+    
+    <p>
+        <label for="product">Product:</label>
+        <input type="text" id="product" list="productlist" name="productlist"/>
+        <datalist id="productlist">
+            <option value="STARTRACK"/>
+            <option value="DHL"/>
+            <option value="TOLL EXPRESS"/>
+            
+        </datalist>
+    
+    </p>
+    
+    <p>
+        <label for="lname">Last Name</label>
+        <input type="text" id=";name" name="lname" maxlength="20" size="20" required="required" pattern="^[a-zA-Z]+$" title="alphanumeric characters"/>
+    
+        
+    </p>
+    
+    <p>
+        <input type="submit" value="send"/>
+        <input type="reset" value="reset fields"/>
+    </p>
+    
+
+    
+    
+</form>
+    
 </body>
 
 
