@@ -1,0 +1,87 @@
+/*
+filename: lab03.css
+author: VH
+created: 13 Dec 2019
+last modified: 14 Dec 2019
+description: refers to lab04task1.html
+*/
+
+* {
+    color: #2F4F4F;   
+}
+
+h1 {
+    color: purple;
+    font-size: 2em;
+    font-weight:bold;
+}
+
+h2 {
+    color: rgb(0,128,128);
+    font-weight:bold;
+    font-size: 1.5em;
+}
+
+aside,footer {
+    font-style:italic;
+}
+
+h1,h2,h3 {
+    font-family: arial,sans-serif;
+}
+
+table,th,td {
+    border:1px solid black;
+}
+
+table {
+    border-collapse:collapse;
+}
+
+#images {
+    text-align:center;
+}
+
+#hthree {
+    color:red;
+}
+
+.special {
+    color:darkorange;
+    font-weight:bold;
+}
+
+.month {
+    text-align:right;
+}
+
+nav a {
+    text-decoration:none;
+    padding: 0.2em 0.4em;
+    border: 4px solid #ccc;
+}
+
+nav a:hover {
+    border-color: darkblue;
+    background-color:lightblue;
+}
+ol {
+    list-style-type: lower-roman;
+}
+
+ul {
+    list-style-type:square;
+}
+
+ol ul {
+    list-style-type: circle;
+}
+
+aside:hover {
+    display:none;
+}
+
+#hyperlinks {
+    clear:both;
+}
+
