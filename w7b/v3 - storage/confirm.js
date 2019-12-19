@@ -15,6 +15,11 @@ function validate(){
 	return result;    //if false the information will not be sent to the server
 }
 
+function cancelBooking() {
+    window.location ="register.html";
+}
+
+
 //This should be really be calculated securely on the server! 
 function calcCost(trips, partySize){
 	var cost = 0;
@@ -23,6 +28,7 @@ function calcCost(trips, partySize){
 	if (trips.search("10day")!= -1) cost += 3000;
 	return cost * partySize;
 }
+
 
 function getBooking(){
 	var cost = 0;
@@ -33,24 +39,31 @@ function getBooking(){
 		document.getElementById("confirm_trip").textContent = sessionStorage.trip;
 		document.getElementById("confirm_species").textContent = sessionStorage.species;
 		document.getElementById("confirm_food").textContent =sessionStorage.food;
-		document.getElementById("confirm_partySize").textContent = sessionStorage.partySize;
-		cost = calcCost(sessionStorage.trip, sessionStorage.partySize);
+		document.getElementById("confirm_partySize").textContent = sessionStorage.partysize;
+		cost = calcCost(sessionStorage.trip, sessionStorage.partysize);
 		document.getElementById("confirm_cost").textContent = cost;
 		//fill hidden fields
 		document.getElementById("firstname").value = sessionStorage.firstname;
 		/*
 		Write lastname, age, species, age, food, and partySize from seesionStorage to the hidden inputs 
 		*/
-		document.getElementById("cost").value = cost;
+        document.getElementById("lastname").value = sessionStorage.lastname;
+        document.getElementById("age").value = sessionStorage.age;
+        document.getElementById("species").value = sessionStorage.species;
+        document.getElementById("food").value = sessionStorage.food;
+        document.getElementById("partysize").value = sessionStorage.partysize;
+		document.getElementById("cost").value = calcCost(sessionStorage.trip,sessionStorage.partysize);
 	}
 
 }
 
 
 function init () {
-	
+	getBooking();
 	var bookForm = document.getElementById("bookform");// link the variable to the HTML element
 	bookForm.onsubmit = validate;          /* assigns functions to corresponding events */
+    
+    document.getElementById("cancelButton").onclick = cancelBooking;
 	
  }
 

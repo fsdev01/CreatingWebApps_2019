@@ -6,6 +6,7 @@
 	<meta name="description" content="Rohirrim Booking Confirmation" />
 	<meta name="keywords"    content="MiddleEarth, Tours, Rohan" />
 	<meta name="author"      content="Grima Wormtongue" />
+    <script src="confirm.js"></script>
 	
 </head>
 
@@ -28,6 +29,14 @@
 		<p>Total Cost: $<span  id="confirm_cost"></span></p>
 		<input type="hidden" name="firstname" id="firstname" />
 		<!--Create the other hidden input here  -->
+        <input type="hidden" name="lastname" id="lastname"/>
+        <input type="hidden" name="age" id="age"/>
+        <input type="hidden" name="species" id="species"/>
+        <input type="hidden" name="trip" id="trip"/>
+        <input type="hidden" name="food" id="food"/>
+        <input type="hidden" name="partysize" id="partysize"/>
+        <input type="hidden" name="cost" id="cost"/>
+        
 		
 		<p><label for="date">Preferred Date</label>
 			<input type="text" id="date" name="bookday" required="required" placeholder="dd/mm/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}" title="Format dd/mm/yyyy" maxlength="10" size="10" />

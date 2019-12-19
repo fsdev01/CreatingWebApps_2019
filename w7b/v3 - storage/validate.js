@@ -1,5 +1,47 @@
 "use strict";
 
+// check if session data on user exists and if so prefill the form 
+function prefill_form(){
+    if(sessionStorage.firstname != undefined){ // if storage for username is not empty
+        document.getElementById("firstname").value = sessionStorage.firstname;
+        document.getElementById("lastname").value = sessionStorage.lastname;
+        document.getElementById("age").value = sessionStorage.age;
+        document.getElementById("partySize").value = sessionStorage.partysize;
+        document.getElementById("food").value = sessionStorage.food;
+        
+        
+        switch(sessionStorage.species){
+            case "Human":
+                document.getElementById("human").checked = true;
+                break;
+            case "Dwarf":
+                document.getElementById("dwarf").checked = true;
+                break;
+            case "Hobbit":
+                document.getElementById("hobbit").checked = true;
+                break;
+            case "Elf":
+                document.getElementById("elf").checked = true;
+                break;
+        }
+        
+        // Convert string to array
+        var tripsString = sessionStorage.trip;
+        var tripsArray = tripsString.split(",");
+        for(var i = 0; i < tripsArray.length ; i++){
+            var dayValue = tripsArray[i];
+            if(dayValue == "1day"){
+                document.getElementById("1day").checked = true;
+            } else if(dayValue == "4day"){
+                document.getElementById("4day").checked = true;
+            } else if(dayValue == "10day"){
+                document.getElementById("10day").checked = true;
+            }
+        }
+    }
+}
+
+
 // return the species selected as string
 function getSpecies(){
     // intialise variable in case does not get reinitialised properly
@@ -156,14 +198,53 @@ function validate() {
     
     if(errMsg != ""){ //only display message box if there is something to show
         alert(errMsg);
+    } else {
+        storeBooking(firstname,lastname,age,getSpecies(),is1day,is4day,is10day); // only store data in webStorage when they are valid
     }
     return result; // if false the information will not be sent to the server
 }
 
 
+/* Store data in the sessionStorage */
+function storeBooking(firstname,lastname,age,species,is1day,is4day,is10day){
+    // get value and assign them to sessionStorage attribute
+    // we use the same name for the attribute and the element id to avoid confusion
+    
+    // Store Trip Value
+    var trip = "";
+    if(is1day){
+        trip = "1day";
+    }
+    if(is4day){
+        if(trip==""){
+            trip = "4day";
+        }else{
+            trip+=", 4day";
+        }
+    }
+    if(is10day){
+        if(trip==""){
+            trip="10day";
+        } else{
+            trip +=", 10day";
+        }
+    }
+    sessionStorage.trip = trip;
+    
+    // Store other values
+    sessionStorage.firstname = firstname;
+    sessionStorage.lastname = lastname;
+    sessionStorage.age = age;
+    sessionStorage.species = species;
+    sessionStorage.food = document.getElementById("food").value;
+    sessionStorage.partysize = document.getElementById("partySize").value;;
+    
+    alert("Trip stored: " + sessionStorage.trip); // testing purposes
+}
 function init() {
     var regForm = document.getElementById("regform");
     regForm.onsubmit = validate;
+    prefill_form();
 }
 
 
