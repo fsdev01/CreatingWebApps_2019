@@ -1,14 +1,14 @@
 <!DOCTYPE html >
 <html lang="en">
 <head>
-<title>Buggy Syntax Palindrome</title>
-
-<meta charset="utf-8" />
-<meta name="description" content="Lab08 - Debug" />
-<meta name="keywords" content="PHP, strings" />
+    <title>Buggy Syntax Palindrome</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Lab08 - Debug" />
+    <meta name="keywords" content="PHP, strings" />
+</head>
 <body>
-<h1>Lab08 - Buggy Syntax Palindrome</h1>
-<hr />
+    <h1>Lab08 - Buggy Syntax Palindrome</h1>
+    <hr/>
 
 <?php
 /*	
@@ -16,9 +16,9 @@
 	Some buggy code with syntax and logic erros 
 	Author: A. Tutor
 */
-if(isset($_GET["text_string"]) {
+if(isset($_GET["text_string"])) {
 	$inputText = $_GET["text_string"];
-	$inputText = stripslashes(trim($inputText))
+	$inputText = stripslashes(trim($inputText));
 
 	if ($inputText == NULL) {
 		$forwardText = $inputText;

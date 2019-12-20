@@ -15,4 +15,13 @@ function factorial ($n) {	// declare the factorial function
 	}				// Note that the factor 1 is not multiplied
 	return $result;
 }
+
+function isPositiveInteger($n){ // declare the function that takes a parameter
+    $result = false;
+    if(is_numeric($n)) // use inbuilt function is_numeric which returns boolean
+        if($n == floor($n))
+            if($n > 0 )
+                $result =true;
+    return $result; // function execution will end here if -ve or non-integer
+}
 ?>
