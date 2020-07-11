@@ -6,9 +6,14 @@ Introduction to Web which covered HTML, CSS, JS and PHP.
 <ol>
  <li> Lecture Code (denoted by the "a" suffix) </li>
  <li> Lab Work (denoted by the "b" suffix") </li>
- <li> Assignment 1 - HTML and CSS </li>
- <li> Assignment 2 - HTML, CSS and JavaScript </li>
- <li> Assignment 3 - HTML, CSS , JavaScript , PHP and MySQL </li>
+ <li> Assignments 1 to 3: Created a web application that advertised job positions and allows potential applicants to apply for vacant positions. </li>
+ <ul>
+  <li> Assignment 1 - Built basic structure of the website using HTML and CSS </li>
+  <li> Assignment 2 - Enhanced Assignment 1 with JavaScript Functions with data validation and prefilled forms using sessionStorage/localStorage </li>
+  <li> Assignment 3 - Enhanced Assignment 2 with PHP and MySQL (database queries) </li>
+ <ul>
 </ol>
+
+
 
 
