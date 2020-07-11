@@ -1,0 +1,121 @@
+/*
+filename: aboutstyle.css
+author: Vinh Huynh
+created: 29-03-2019
+last modified: 31-03-2019
+description: about.html
+*/
+.content {
+	color: #0B2545;
+	height:auto;
+	background-color: #f2f2f2;
+	padding-left:2em;
+	padding-bottom: 0.6em;
+}
+
+
+/** Requirement: Table Centered Within Section, Headings in Bold and background with hexadeciaml **/
+
+#tableheader,#emailme{
+	text-align:center;
+}
+
+table {
+	margin: 0 auto;
+}
+
+table,th,td{
+	border: 1px solid black;
+	border-collapse:collapse;
+}
+
+th,td {
+	background-color:#d9d9d9;
+}
+
+
+/** Requirement: Photo should have border using shorthand property **/
+img {
+	width:120px;
+	height:150px;
+	border:5px solid grey;
+	border-radius: 25px ;
+}
+
+
+/** Requirement: mailto Link Should have similar style as Definition List **/
+/** This is interpreted as similar colour and font (inherited)**/
+a{
+	color: #0B2545;
+}
+
+/** Requirement: Figure(with image) should be floated right to "Definition List" **/
+
+dl{
+	float:left;
+}
+
+figure {
+	float:right;
+	margin-right:1.5em;
+}
+
+
+
+
+/** Requirement: <dt> and <dt> elements are on the same line  **/
+/** Approach: Float <dt> and <dt> to the left inside the <dl> container **/
+/** However, after each <dt> should clear floats **/
+
+
+/** As per requirement <dt> will have common width **/
+dt {
+	float:left;
+	border:1px solid grey;
+	clear:both;
+	width:25%;
+}
+
+dd {
+	float:left;
+	border:1px solid black;
+	width: 25%;
+}
+
+
+dt,dd {
+	margin-top:15px;
+}
+
+
+
+/** Clear Floats Above  - Figure and Definition List**/
+#tableheader {
+	clear:both;
+}
+
+
+/** OTHER STYLING OPTIONS**/
+figcaption {
+	font-style: italic;
+	padding-left: 0.3em;
+}
+
+.skill {
+	display:inline-block;
+	width:150px;
+} 
+
+/** Remove outline when click on details HTML element **/
+summary {
+	outline:none;
+}
+
+details {
+	margin-bottom:1.2em;
+}
+
+details p {
+	font-size: 0.875em;
+}
+

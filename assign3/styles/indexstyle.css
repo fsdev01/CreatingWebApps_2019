@@ -1,0 +1,75 @@
+/*
+filename: index.css
+author: Vinh Huynh
+created: 30-03-2019
+last modified: 31-03-2019
+description: index.html
+*/
+
+
+/*************************  PART 1- Unique to HOME PAGE index.html *************************/
+
+.content {
+	/** source of image:https://unsplash.com/photos/5fNmWej4tAA **/
+	background-image: url("images/office.jpg");
+	background-repeat: no-repeat;
+	background-size:cover;
+	height: 80%;
+	color: #fffbf3;
+}
+
+
+
+/** For description containers **/
+.desc {
+	width: 50%;
+	margin:0 auto; /** Center Content **/
+	font-size: 1.25em;
+	background-color: rgba(0,0,0,0.5);
+}
+
+/** Apply to span element of first paragraph **/
+#hText {
+	font-size:1.8em;
+	font-weight: bold;
+}
+
+/** Requirement: example of Pseudo Element and Contextual Selector**/
+.desc h3::first-letter{
+	font-style:italic;
+}
+
+/** Header Section - Line under the Heading **/
+
+#underline {
+	width: 30%;
+	border-top: 0.3125em solid #ED9121;
+	border-bottom: 0;
+	border-right:0;
+	border-left:0;
+}
+
+#slogan {
+	letter-spacing: 0.095em;
+	font-family: Roboto,Arial;
+	font-style: italic;
+	text-align:center;
+	color:#ED9121;
+}
+
+
+/** Enhancement Source:https://www.abeautifulsite.net/a-clean-fade-in-effect-for-webpages **/ 
+
+.content { 
+  opacity: 1; /** Corresponds to zero transparency - see image **/
+  transition: 3s opacity; /* Time taken for fade effect */
+}
+
+
+.content.fade { /** Initally set content not visible **/
+	/** Opacity 0 - means completely transparent (image not visible) **/
+    opacity: 0;
+    transition: none;
+
+}
+

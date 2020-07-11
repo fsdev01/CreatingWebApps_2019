@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8" />
+	<meta name="description" content="Profile Page - About Me" />
+	<meta name="keywords" content="Frontem,Technologies,Profile,About,Me" />
+	<meta name="author" content="Vinh Huynh"  />
+	<title>About Me - Profile Page</title>
+	
+	<!-- Main CSS -->
+	<link href="styles/style.css" rel="stylesheet" type="text/css"/>
+	<!-- Stylesheet for about page -->
+	<link href="styles/aboutstyle.css" rel="stylesheet" type="text/css"/>
+
+	<!-- External Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css"/>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<?php 
+	include("header.inc"); // include common header
+	include("menu.inc"); // include common menu
+?> 
+
+
+
+
+	
+	<div class="content">
+		<h1> Student Profile - About Me</h1>
+		<dl>
+			<dt>Name:</dt>
+			<dd>Vinh Huynh</dd>
+
+			<dt>Student ID:</dt>
+			<dd>102125413</dd>
+
+			<dt>Tutor's Name:</dt>
+			<dd>Mr. Guangming Cui</dd>
+
+			<dt>Semester 1 Courses:</dt>
+			<dd>CWA - Creating Web Applications</dd>
+			<dd>UCD - User Centered Design </dd>
+		</dl>
+
+		<figure id="imgprofile">
+			<img src="images/profile.jpg" alt="Profile Image of Me"/>
+			<figcaption>Student ID Photo</figcaption>
+		</figure>
+
+
+		<br/>
+		<h3 id="tableheader">My Timetable - Semester 1</h3>
+		<table>
+			<tr>
+				<th colspan="2">Monday</th>
+			</tr>
+			<tr>
+				<th>4:30PM to 6:30PM</th>
+				<td>CWA Lecture AS404</td>
+			</tr>
+			<tr>
+				<th>6:30PM to 8:30PM</th>
+				<td>UCD Lecture ATC101 </td>
+			</tr>
+			<tr>
+				<th colspan="2">Tuesday</th>
+			</tr>
+			<tr>
+				<th>5:30PM to 7:30PM </th>
+				<td>CWA Lab BA604 </td>
+			</tr>
+			<tr>
+				<th colspan="2">Friday</th>
+			</tr>
+			<tr>
+				<th>4:30PM to 6:30PM </th>
+				<td>UCD Tutorial EN209 </td> 
+			</tr>
+		</table>
+
+		<section id="mskills">
+			<h3> Background Skills </h3>
+			<pre>
+Current Degree:       Masters of Information Technology  
+Technical Skills:     Beginner
+			</pre>
+
+			<details>
+				<summary>
+					<span class="skill">Web Development:</span>
+					<progress value="0.5" max="5"></progress>
+				</summary>
+					<p>This includes the following: </p>
+					<p> HTML, CSS , Javascript and PHP </p>
+			</details>
+			
+
+			<details>
+				<summary>
+					<span class="skill">Programming: </span>
+					<progress value="2" max="5"></progress>
+				</summary>
+				<p>This includes: </p>
+				<p>Python, Perl,Ruby, C and Java</p>
+			</details>
+
+
+			<details>
+				<summary>
+					<span class="skill">Microsoft Excel: </span> 
+					<progress value="3" max="5"></progress>
+				</summary>
+				<p>This includes: </p>
+				<p> Importing CSV files, Filtering, PivotTables and Excel Formulas </p>
+			</details>
+
+
+
+			<details>
+				<summary>
+					<span class="skill"> SQL Language </span>
+					<progress value="3" max="5"></progress> 
+				</summary>
+				<p>This includes:</p>
+				<p> MySql and Microsoft Access </p>
+			</details>
+		</section>
+
+		<p id="emailme"><a href="mailto:102125413@student.swin.edu.au">Email Me - Student Email</a></p>
+	</div>
+<?php 
+	include("footer.inc"); // include common footer
+?> 
+</body>
+</html>
