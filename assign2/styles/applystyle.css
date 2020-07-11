@@ -1,0 +1,42 @@
+/*
+filename: applystyle.css
+author: Vinh Huynh
+created: 30-03-2019
+last modified: 31-03-2019
+description: apply.html
+*/
+
+
+.content {
+	color: #0B2545;
+	background-color: #f2f2f2;
+	padding-left:2em;
+	padding-bottom: 0.6em;
+}
+
+/** Ensure Form controls have blue text **/
+input[type=submit],input[type=reset] {
+	color: #0B2545;
+	margin:4px 2px;
+}
+
+input {
+	color: #0B2545;
+}
+
+textarea,select {
+	color: #0B2545;
+}
+
+
+
+
+/** resize gender box **/
+fieldset {
+	width:30%;
+}
+
+/** Textarea: remove the ability to resize the textarea box **/
+textarea {
+	resize: none;
+}

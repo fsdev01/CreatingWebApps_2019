@@ -1,0 +1,61 @@
+/*
+filename: jobstyle.css
+author: Vinh Huynh
+created: 28-03-2019
+last modified: 31-03-2019
+description: jobs.html
+
+**/
+/** source of image: https://unsplash.com/photos/dMUt0X3f59Q **/
+
+
+.content {
+	color:#E8EDDF;
+	height:auto;
+	background-image: url("images/code.jpg");
+	background-repeat: no-repeat;
+	background-size:cover;
+	padding-left:5em;
+}
+
+
+/** Style Anchor elements (hyperlinks) **/
+/** Requirement - Example of Pseudo Class **/
+a:link,a:visited {
+	color:white;
+}
+
+a:hover,a:active {
+	color:orange;
+}
+
+
+/** Requirement: h1 elements use shorthand font property **/
+
+h1 {
+	font: italic 2.1em Roboto,serif;
+	text-align: center;
+}
+
+
+/** Requirement - Aisde that is 25% width and floated to right with padding and margin**/
+aside {
+	float:right;
+	margin-right: 0.2em;
+	padding: 0.5em 2em 0.5em 0.5em;
+	width:25%;
+	font-style: italic;
+	border:2px solid grey;
+	background-color: rgba(0,0,0,0.5);
+}
+section {
+	clear:both;
+	width: 70%;
+}
+
+
+section h2 {
+	padding-top:1.8em;
+}
+
+

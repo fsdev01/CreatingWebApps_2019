@@ -1,0 +1,24 @@
+/*
+filename: manage.css
+author: Vinh Huynh
+created: 19-05-2019
+last modified: 31-03-2019
+description: manage.php
+*/
+
+.content {
+	color: #0B2545;
+	height:auto;
+	background-color: #f2f2f2;
+	padding-left:2em;
+	padding-bottom: 0.6em;
+}
+
+a:link,a:hover, a:active, a:visited {
+	color:#0B2545;
+}
+
+
+table, th, td {
+  border: 1px solid black;
+}

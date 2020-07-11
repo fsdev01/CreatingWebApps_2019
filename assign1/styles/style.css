@@ -1,0 +1,94 @@
+/*
+filename: style.css
+author: Vinh Huynh
+created: 23-03-2019
+last modified: 31-03-2019
+description: index.htm,apply.html,jobs.html,about.html,enhancements.html
+*/
+
+
+/*********************** PART 1 - COMMON FOR WEB PAGES **************************/
+/** Common Font to all pages and Reset Margin to 0 */
+body{
+	margin: 0;
+	font-family:'Raleway', arial;
+
+}
+
+/**Common Footer for all pages - AS PER POSITION DESCRIPTION REQUIREMENT**/
+/** Requirement: Footer that is centered and takes entire width**/
+footer {
+	bottom:0px;
+	font-size: 12px;
+	color:black;
+	width:100%;
+}
+
+footer p {
+	text-align: center;
+}
+
+
+/** NAVIGATION FOR ALL WEB PAGES **/
+/** NAVIGATION LINKS - Horizontal Bar**/
+
+/** ---ENHANCEMENT----**/
+/**Source for Sticky Navbar: https://www.w3schools.com/css/css_navbar.asp**/
+#navbar {
+	position:sticky;
+	top: 0;
+	overflow:hidden;
+	margin-bottom:0.9em;
+}
+
+/** NavBar Based on Task 2 of Week 4 Lab **/
+#navbar ul{
+	margin: 0;
+	padding:0;
+}
+
+#navbar ul li {
+	list-style:none;
+	float:left;
+
+}
+
+#navbar ul li a {
+	display:block; /** Make whole block clickable**/
+	font-weight:bold;
+	text-decoration: none; /** remove hyperlink underline **/
+	padding: 0.7em 1em;
+}
+
+#navbar a:link,#navbar a:visited,#navbar a:hover{
+	color:#EEF4ED;
+}
+
+#navbar a:active {
+	color:#6E7E85;
+}
+#navbar a:hover {
+	background-color: #0B2545;
+}
+
+
+/** Set Background for Navigation **/
+#title {
+	margin:0;
+	padding-bottom:0.2em;
+	padding-left: 0.5em;
+}
+
+
+#title,#navbar {
+	background-color: #134074;
+	color:#EEF4ED;
+	min-width:400px;
+}
+
+
+/** COMMON SPACING FOR ALL WEB PAGES BETWEEN NAV AND CONTENT**/
+.content {
+	padding-top: 0.4em;
+	padding-bottom:0.8em;
+}
