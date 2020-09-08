@@ -1,5 +1,5 @@
 # Unit: Intro to Web Apps -  2019
-Introduction to Web which covered HTML, CSS, JS and PHP.
+Introduction to Web App which covered HTML, CSS, JS, PHP and MySQL.
 
 
 <h3> This repository contains: </h3>
